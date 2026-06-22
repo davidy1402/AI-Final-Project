@@ -1,0 +1,15 @@
+timestamp,image_filename,predicted_label,confidence,feedback
+2026-06-21 13:16:45,360_F_447651703_Vn9GtLDPktVqzMPRB5lATVmjaDp2elLc.jpg,Not Flooded,50.38%,Wrong
+2026-06-21 13:17:12,floods_real_pillars.jpg,Not Flooded,52.81%,Wrong
+2026-06-21 13:17:48,images (1).jpg,Not Flooded,53.35%,Wrong
+2026-06-21 13:18:18,0c808c5b-537e-472e-b160-a5684ded13bc_1920x1080.jpg,Not Flooded,57.07%,Wrong
+2026-06-21 13:18:46,UVMDrones_Waterbury-11July2023a-min-768x576.jpg,Not Flooded,56.15%,Wrong
+2026-06-21 13:19:38,images (2).jpg,Not Flooded,50.70%,Wrong
+2026-06-22 01:54:00,WhatsApp Image 2026-06-21 at 14.48.54.jpeg,Not Flooded,56.29%,Correct
+2026-06-22 02:01:59,aerial-view-of-flooding-on-jalan-dewi-sri-kuta-bali-after-heavy-rain-feb-24-2026-drone-footage-shows-submerged-streets-traffic-disruption-urban-flood-conditions-free-video.jpg,Flooded,59.54%,Correct
+2026-06-22 11:31:54,aerial-view-of-flooding-on-jalan-dewi-sri-kuta-bali-after-heavy-rain-feb-24-2026-drone-footage-shows-submerged-streets-traffic-disruption-urban-flood-conditions-free-video.jpg,Not Flooded,53.72%,Wrong
+2026-06-22 11:32:07,WhatsApp Image 2026-06-21 at 14.48.54.jpeg,Flooded,51.99%,Wrong
+2026-06-22 11:32:22,WhatsApp Image 2026-06-18 at 15.10.30.jpeg,Not Flooded,52.68%,Correct
+2026-06-22 11:33:16,13092020-david-st-loh-7-sekinchan-paddy-fields-in-kuala-selangor_cover_2000x1047.jpg,Flooded,52.81%,Wrong
+2026-06-22 11:34:12,drone-footage-perai-flood-riverbank-houses-and-roads-video.jpg,Flooded,51.05%,Correct
+2026-06-22 11:46:16,WhatsApp Image 2026-06-22 at 11.42.27.jpeg,Flooded,50.64%,Wrong
