@@ -15,13 +15,12 @@ METRICS_PATH = "results/metrics.txt"
 
 # 1. Startup Checkpoint Validation
 if not os.path.exists(CHECKPOINT_PATH):
-    st.warning("⚠️ No trained model found. Please run `python train.py` first to train the model and save the checkpoint.")
+    st.warning("No trained model found. Please run `python train.py` first to train the model and save the checkpoint.")
     st.stop()
 
 # Set page layout and aesthetics
 st.set_page_config(
     page_title="Drone Flood Damage Assessment",
-    page_icon="🛸",
     layout="wide"
 )
 
@@ -77,15 +76,15 @@ def log_feedback(filename, predicted_label, confidence, feedback_type):
         writer.writerow([timestamp, filename, predicted_label, f"{confidence:.2f}%", feedback_type])
 
 # Sidebar - System Control Panel
-st.sidebar.title("🛸 System Control Center")
+st.sidebar.title("System Control Center")
 st.sidebar.markdown("---")
-st.sidebar.markdown("### 🎓 Course Details")
+st.sidebar.markdown("### Course Details")
 st.sidebar.info("**Course:** SOF106 Principles of AI\n\n**Project:** Drone Aerial Flood Damage Assessment")
 
 # Display validation metrics if available
 if os.path.exists(METRICS_PATH) or os.path.exists(CONFUSION_MATRIX_PATH):
     st.sidebar.markdown("---")
-    st.sidebar.markdown("### 📊 Model Performance")
+    st.sidebar.markdown("### Model Performance")
     
     if os.path.exists(METRICS_PATH):
         try:
@@ -135,18 +134,18 @@ if uploaded_file is not None:
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("### 📸 Drone View")
+        st.markdown("### Drone View")
         image = Image.open(temp_path)
         st.image(image, use_column_width=True, caption=f"Uploaded File: {img_name}")
         
     with col2:
-        st.markdown("### 🎯 Assessment Results")
+        st.markdown("### Assessment Results")
         
         # Color-coded labels
         if label == "Flooded":
-            st.markdown(f"<div class='flooded-label'>🚨 {label}</div>", unsafe_allow_html=True)
+            st.markdown(f"<div class='flooded-label'> {label}</div>", unsafe_allow_html=True)
         else:
-            st.markdown(f"<div class='not-flooded-label'>✅ {label}</div>", unsafe_allow_html=True)
+            st.markdown(f"<div class='not-flooded-label'> {label}</div>", unsafe_allow_html=True)
             
         # Confidence score visualization
         st.markdown("**Assessment Confidence**")
@@ -155,19 +154,19 @@ if uploaded_file is not None:
         
         # Human feedback logging section
         st.markdown("---")
-        st.markdown("#### 👤 Human-in-the-loop Feedback")
+        st.markdown("#### Human-in-the-loop Feedback")
         st.write("Does this prediction match the visual ground truth?")
         
         if not st.session_state.feedback_submitted:
             btn_col1, btn_col2 = st.columns(2)
             with btn_col1:
-                if st.button("✅ Correct", use_container_width=True):
+                if st.button("Correct", use_container_width=True):
                     log_feedback(img_name, label, confidence, "Correct")
                     st.session_state.feedback_submitted = True
                     st.session_state.logged_feedback_type = "Correct"
                     st.rerun()
             with btn_col2:
-                if st.button("❌ Wrong", use_container_width=True):
+                if st.button("Wrong", use_container_width=True):
                     log_feedback(img_name, label, confidence, "Wrong")
                     st.session_state.feedback_submitted = True
                     st.session_state.logged_feedback_type = "Wrong"
@@ -181,4 +180,4 @@ if uploaded_file is not None:
     except Exception:
         pass
 else:
-    st.info("💡 Please upload an aerial drone image to initiate triage analysis.")
+    st.info("Please upload an aerial drone image to initiate triage analysis.")
